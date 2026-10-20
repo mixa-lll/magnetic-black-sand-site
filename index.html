@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magnetic Black Sand — скоро открытие</title>
+<meta name="description" content="Подушечка с натуральным магнитным чёрным песком. 20 минут тепла, мягкого веса и аромата. Скоро открытие.">
+<!-- Заглушка: убрать noindex, когда выйдет настоящий сайт -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --gold: #f4d27a;
+    --gold-dim: rgba(244, 210, 122, .55);
+    --line: rgba(244, 210, 122, .22);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--gold);
+    font-family: "Jost", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    padding: 48px 16px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  /* Кольца магнитного поля за логотипом */
+  .field {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 50% 42%, rgba(244, 210, 122, .10), transparent 38%),
+      repeating-radial-gradient(circle at 50% 42%, transparent 0 46px, var(--line) 46px 47px, transparent 47px 92px);
+    -webkit-mask-image: radial-gradient(circle at 50% 42%, #000 0, transparent 62%);
+            mask-image: radial-gradient(circle at 50% 42%, #000 0, transparent 62%);
+    opacity: .55;
+  }
+  main { position: relative; display: flex; flex-direction: column; align-items: center; }
+  .logo {
+    width: min(300px, 62vw);
+    height: auto;
+    filter: drop-shadow(0 0 28px rgba(244, 210, 122, .18));
+  }
+  h1 {
+    margin-top: 40px;
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    font-size: clamp(22px, 4.2vw, 34px);
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    padding-left: .32em; /* компенсирует разрядку справа */
+  }
+  .rule {
+    width: 64px;
+    height: 1px;
+    margin: 22px 0;
+    background: var(--gold-dim);
+  }
+  p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(17px, 2.6vw, 21px);
+    color: var(--gold-dim);
+    max-width: 34ch;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+  footer {
+    position: relative;
+    margin-top: 56px;
+    font-size: 12px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    main { animation: rise 1.4s ease-out both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+  }
+</style>
+</head>
+<body>
+  <div class="field" aria-hidden="true"></div>
+  <main>
+    <img class="logo" src="logo.svg" width="887" height="1190" alt="Magnetic Black Sand">
+    <h1>Скоро открытие</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p>Живой чёрный песок для глубокого отдыха</p>
+  </main>
+  <footer>© 2026 Magnetic Black Sand</footer>
+</body>
+</html>
